@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd2ed856cfe641c08f797e1fb198769, type: 3}
+  m_Name: NewStory
+  m_EditorClassIdentifier: 
+  scenes:
+  - sceneSprite: {fileID: 0}
+    dialogueInfos: []
+  - sceneSprite: {fileID: 0}
+    dialogueInfos:
+    - character: 0
+      expression: 0
+      dialogueText: []
+    - character: 0
+      expression: 0
+      dialogueText: []
+    - character: 0
+      expression: 0
+      dialogueText: []
+  - sceneSprite: {fileID: 0}
+    dialogueInfos: []
