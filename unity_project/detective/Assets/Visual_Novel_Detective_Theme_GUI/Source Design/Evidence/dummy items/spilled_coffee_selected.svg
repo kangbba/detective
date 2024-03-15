@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="spilled_coffee_selected.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg3877"
+   version="1.1"
+   viewBox="0 0 108.4745 101.04157"
+   height="381.8894"
+   width="409.98236">
+  <defs
+     id="defs3871">
+    <filter
+       height="1.1640112"
+       y="-0.082005598"
+       width="1.1423409"
+       x="-0.071170442"
+       id="filter11768"
+       style="color-interpolation-filters:sRGB"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur11770"
+         stdDeviation="3.1272093"
+         inkscape:collect="always" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter7096"
+       x="-0.045992889"
+       width="1.0919858"
+       y="-0.050190285"
+       height="1.1003807">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.8951776"
+         id="feGaussianBlur7098" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2313"
+       id="radialGradient15621"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.6990278,0.48837329,-0.3291084,1.8188397,-2507.9266,-386.04585)"
+       cx="953.95514"
+       cy="60.080509"
+       fx="953.95514"
+       fy="60.080509"
+       r="7.2087173" />
+    <linearGradient
+       id="linearGradient2313"
+       inkscape:collect="always">
+      <stop
+         id="stop2309"
+         offset="0"
+         style="stop-color:#674a0f;stop-opacity:1" />
+      <stop
+         id="stop2311"
+         offset="1"
+         style="stop-color:#998049;stop-opacity:1" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4083-0-1-6-6-3-1">
+      <path
+         sodipodi:nodetypes="csssscc"
+         d="m 1018.5402,542.47462 0.2438,46.29323 c 0.045,8.45203 7.2173,12.828 15.3367,15.176 14.8333,4.28951 29.6446,4.39749 44.4308,-0.23404 8.0658,-2.52645 15.2205,-6.8847 15.176,-15.33673 l -0.2438,-46.29323 z"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.04651;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path4085-5-6-2-0-8-6" />
+    </clipPath>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4077-2-4-3"
+       x="-0.33881173"
+       width="1.6776234"
+       y="-0.25062278"
+       height="1.5012456">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="6.7969452"
+         id="feGaussianBlur4079-7-1-7" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4277"
+       id="linearGradient15623"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.9318361,0,0,0.79550848,-2736.5701,126.15654)"
+       x1="948.78613"
+       y1="66.209053"
+       x2="966.26807"
+       y2="64.588478" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4277">
+      <stop
+         style="stop-color:#e5e5e5;stop-opacity:1"
+         offset="0"
+         id="stop4273" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop4275" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4283"
+       id="linearGradient15625"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.7640507,0,0,0.74998255,-2576,129.097)"
+       x1="952.33179"
+       y1="69.696609"
+       x2="954.74359"
+       y2="62.904678" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4283">
+      <stop
+         style="stop-color:#835624;stop-opacity:1"
+         offset="0"
+         id="stop4279" />
+      <stop
+         style="stop-color:#fff6ee;stop-opacity:1"
+         offset="1"
+         id="stop4281" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4822"
+       id="linearGradient15627"
+       gradientUnits="userSpaceOnUse"
+       x1="949.66095"
+       y1="60.411034"
+       x2="958.68146"
+       y2="60.660439" />
+    <linearGradient
+       id="linearGradient4822"
+       inkscape:collect="always">
+      <stop
+         id="stop4818"
+         offset="0"
+         style="stop-color:#ffdd9f;stop-opacity:0" />
+      <stop
+         style="stop-color:#c7994a;stop-opacity:1"
+         offset="0.43976027"
+         id="stop4824" />
+      <stop
+         id="stop4820"
+         offset="1"
+         style="stop-color:#ffdd9f;stop-opacity:0" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4828-2-2-9-5-4">
+      <ellipse
+         transform="matrix(0.99999999,1.5385453e-4,0.05120953,0.99868793,0,0)"
+         style="opacity:1;fill:url(#linearGradient4832);fill-opacity:1;stroke:none;stroke-width:0.520467;stroke-opacity:1;paint-order:fill markers stroke"
+         id="ellipse4830-7-9-9-8-3"
+         cx="950.27258"
+         cy="60.077477"
+         rx="9.3417788"
+         ry="0.47405395" />
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4584"
+       id="linearGradient15629"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.8134302,0.76356807,-0.53851646,2.689472,-3570.7562,-655.14608)"
+       x1="954.48773"
+       y1="44.71397"
+       x2="954.48773"
+       y2="41.907639" />
+    <linearGradient
+       id="linearGradient4584"
+       inkscape:collect="always">
+      <stop
+         id="stop4580"
+         offset="0"
+         style="stop-color:#382808;stop-opacity:1" />
+      <stop
+         id="stop4582"
+         offset="1"
+         style="stop-color:#745411;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4804"
+       id="linearGradient15631"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.0823543,0.53879248,-0.53879248,4.0823543,-3775.6104,-565.40563)"
+       x1="945.25671"
+       y1="60.795689"
+       x2="945.27002"
+       y2="62.334866" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4804">
+      <stop
+         style="stop-color:#ffdd9f;stop-opacity:0"
+         offset="0"
+         id="stop4800" />
+      <stop
+         style="stop-color:#b17a15;stop-opacity:1"
+         offset="1"
+         id="stop4802" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4838-7-1-2"
+       x="-0.15599905"
+       width="1.3119981"
+       y="-0.028363667"
+       height="1.0567273">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.15809009"
+         id="feGaussianBlur4840-3-3-3" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     fit-margin-bottom="10"
+     fit-margin-right="10"
+     fit-margin-left="10"
+     lock-margins="true"
+     fit-margin-top="10"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="-59.608057"
+     inkscape:cx="381.49317"
+     inkscape:zoom="0.33557348"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata3874">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-4.8965979,-163.93797)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       sodipodi:nodetypes="ccssssscc"
+       transform="matrix(0.71158945,0.14248247,-0.14248247,0.71158945,-626.98412,-349.64049)"
+       d="m 1092.4633,542.34108 -66.5785,3.30736 16.8007,38.17578 c 3.4046,7.73613 -13.998,17.96958 -7.2732,23.08983 27.6745,21.07137 69.0818,19.60532 79.6848,12.88241 8.9371,-5.66652 12.5861,-9.85387 18.0971,-23.03923 5.0397,-12.05757 2.9403,-24.38776 -1.691,-34.48202 -2.8192,-6.14442 -11.4762,-10.75232 -21.1304,-14.21325 z"
+       style="fill:#140e04;fill-opacity:0.491936;stroke:none;stroke-width:4.04651;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter11768)"
+       id="path15557" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       transform="matrix(0.72571401,0,0,0.72571401,-511.26016,-1171.7111)"
+       d="m 761.45703,1848.6562 c -2.02072,0.043 -4.13967,0.3998 -6.25781,0.9063 -4.22369,1.01 -8.96022,2.8898 -9.38672,7.1934 -0.29419,2.9697 5.96371,3.369 6.09375,7.0312 1.11196,2.9876 3.33732,4.0384 6.19336,3.9941 1.73419,0.8455 3.38698,1.7893 4.27539,3.6426 a 37.450902,1.8979459 10.272766 0 0 -32.0918,-3.9004 37.450902,1.8979459 10.272766 0 0 0,0.01 h -0.0195 l -8.24414,45.5547 c -1.50493,8.3171 4.74512,13.9325 12.29688,17.7285 13.7961,6.9348 28.33616,9.7559 43.7207,7.9121 8.01188,-0.9602 15.49984,-3.7263 17.47266,-11.2109 20.72541,-0.6438 40.71533,-41.3877 7.41211,-40.625 l 1.08789,-6.0157 h -0.0234 a 37.450902,1.8979459 10.272766 0 0 -28.77344,-7.0937 l 0.15625,-3.1387 2.17188,-1.582 c 5.54452,-2.3466 9.62405,1.6719 14.87304,2.6914 4.85464,0.9429 5.09296,-2.7229 5.75977,-4.5273 1.02499,-2.7747 -0.0394,-8.0251 -3.65235,-8.1172 -4.00766,-0.1022 -9.9308,9.1635 -10.35156,5.5839 -0.18848,-1.6034 1.34948,-3.044 -0.97656,-5.0273 -4.03886,-1.1129 -9.41378,-0.4428 -10.85938,-5.0195 -2.45987,-4.6561 -6.43136,-6.0766 -10.87695,-5.9825 z m 43.41797,45.3711 c 18.6938,0.3808 2.10655,24.3014 -8.00195,26.2872 l 4.72656,-26.1211 c 1.18154,-0.1164 2.29426,-0.186 3.27539,-0.1661 z"
+       style="fill:none;fill-opacity:1;stroke:#e6b404;stroke-width:2.89134;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;filter:url(#filter7096)"
+       id="path15559" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       sodipodi:nodetypes="ssccssccssssccccccs"
+       id="path15561"
+       d="m 40.40765,191.66344 c 0.234929,-1.29836 2.376606,-2.96459 1.826273,-4.68889 -0.553282,-1.73358 -1.905284,-2.51536 -3.330322,-3.21006 -2.072669,0.0321 -3.687775,-0.73114 -4.494743,-2.89926 -0.09437,-2.65769 -4.635577,-2.94725 -4.422077,-5.10244 0.309515,-3.12317 3.74631,-4.48798 6.811498,-5.22094 4.918934,-1.17624 9.839153,-1.23057 12.435758,3.68427 1.049093,3.32142 4.949337,2.83458 7.880395,3.64225 1.688037,1.43932 0.572018,2.4847 0.708806,3.64832 0.305349,2.59775 4.603977,-4.12528 7.512396,-4.05115 2.621996,0.0668 3.393702,3.87634 2.649848,5.88994 -0.483915,1.30953 -0.656656,3.96951 -4.179734,3.28525 -3.809267,-0.73983 -6.7697,-3.65597 -10.793439,-1.95301 l -1.576759,1.1488 -0.219966,4.45805 -3.175838,3.14097 -0.966575,3.54071 -7.236579,-2.15683 z"
+       style="fill:url(#radialGradient15621);fill-opacity:1;stroke:none;stroke-width:0.726857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       sodipodi:nodetypes="cccccc"
+       id="path15563"
+       d="m 70.617269,197.65425 c -2.109793,0.78294 -2.345119,5.58451 -0.96652,5.35694 19.126371,-2.49286 4.227701,18.81086 -3.44505,18.97768 -1.737053,-0.26032 -2.555691,5.01923 -0.901852,5.12279 15.464204,0.52926 31.039802,-30.71966 5.316122,-29.45693 z"
+       style="fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.954437px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       sodipodi:nodetypes="csssscc"
+       d="m 18.701853,183.58155 -5.981883,33.05928 c -1.092148,6.03582 3.443177,10.11156 8.923592,12.86637 10.012024,5.0327 20.564481,7.07928 31.729258,5.74122 6.090267,-0.72989 11.774213,-2.88778 12.866361,-8.92361 l 5.981883,-33.05928 z"
+       style="fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:2.93661;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path15565" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       clip-path="url(#clipPath4083-0-1-6-6-3-1)"
+       transform="matrix(0.71342722,0.13297525,-0.13297525,0.71342722,-635.81676,-338.87525)"
+       d="m 1093.4844,542.08008 -21.0723,0.11133 0.2441,46.18164 c 0.045,8.45203 -7.11,12.80949 -15.1757,15.33593 -3.9647,1.24188 -7.9322,2.132 -11.9004,2.70313 11.0036,1.55764 21.9934,0.73531 32.9707,-2.70313 8.0657,-2.52644 15.2203,-6.8839 15.1758,-15.33593 z"
+       style="fill:#bfbfbf;fill-opacity:1;stroke:none;stroke-width:4.04651;stroke-opacity:1;paint-order:fill markers stroke;filter:url(#filter4077-2-4-3)"
+       id="path15567" />
+    <ellipse
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       transform="matrix(0.98399352,0.17820423,-0.12742796,0.99184783,0,0)"
+       ry="1.379191"
+       rx="27.178551"
+       cy="177.53723"
+       cx="69.1912"
+       id="ellipse15569"
+       style="fill:url(#linearGradient15623);fill-opacity:1;stroke:none;stroke-width:1.51422;stroke-opacity:1;paint-order:fill markers stroke" />
+    <ellipse
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       transform="matrix(0.98399352,0.17820423,-0.12742796,0.99184783,0,0)"
+       style="fill:url(#linearGradient15625);fill-opacity:1;stroke:none;stroke-width:1.42757;stroke-opacity:1;paint-order:fill markers stroke"
+       id="ellipse15571"
+       cx="69.1912"
+       cy="177.53723"
+       rx="25.623154"
+       ry="1.3002617" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       transform="matrix(2.6990278,0.48837329,-0.48837329,2.6990278,-2498.2821,-439.5028)"
+       clip-path="url(#clipPath4828-2-2-9-5-4)"
+       sodipodi:nodetypes="ccccc"
+       id="path15573"
+       d="m 950.4907,59.810334 c 0.14664,0.599488 0.51105,1.081208 1.19109,1.401033 l 3.31973,-0.04546 c 1.58045,-0.152534 2.53641,-0.625533 2.75976,-1.349254 -2.64385,-0.155717 -5.00203,-0.203572 -7.27058,-0.0063 z"
+       style="fill:url(#linearGradient15627);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       d="m 46.817782,187.34966 a 6.0937429,10.648013 11.322674 0 0 -4.471955,1.81641 25.623242,1.298541 10.272767 0 0 2.94841,0.54411 25.623242,1.298541 10.272767 0 0 4.877495,0.8581 6.0937429,10.648013 11.322674 0 0 -3.35395,-3.21862 z"
+       style="fill:url(#linearGradient15629);fill-opacity:1;stroke:none;stroke-width:0.865508;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path15575" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       style="fill:url(#linearGradient15631);fill-opacity:1;stroke:none;stroke-width:0.67943;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 61.530571,193.26118 c -0.29634,1.26649 -3.396755,2.2975 -5.393211,3.13604 -1.66862,0.70092 -2.802067,-0.26953 -4.502714,-1.07227 -2.245231,-1.05978 -3.322817,0.13936 -4.819171,0.52846 -2.040939,0.53074 -2.690211,-1.09459 -4.030149,-1.65128 0,0 -3.074494,-2.00109 -2.616694,-3.33898 0,0 3.93181,0.54152 4.458224,0.77082 0.924051,0.40251 1.509231,1.38645 2.42635,1.80447 0.581654,0.26508 1.242637,0.30524 1.873022,0.41083 0.85848,0.14363 1.748903,0.51232 2.593585,0.30241 0.886623,-0.22033 1.345863,-1.48776 2.256984,-1.5548 0.951854,-0.07 1.61838,1.19115 2.570192,1.2617 0.875957,0.0651 5.183406,-0.59735 5.183406,-0.59735 z"
+       id="path15577"
+       sodipodi:nodetypes="cssscssssssscc" />
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="D:\Calcatz\Icon Pack\VN Game Orient Express Theme\Visual Novel GUI\png\Evidence\spilled_coffee_selected.png"
+       transform="matrix(2.8896777,0.52287027,-0.52287027,2.8896777,-2688.8769,-485.37467)"
+       sodipodi:nodetypes="ccccc"
+       id="path15579"
+       d="m 950.03624,61.875217 0.18534,11.253327 c 0.30041,0.675441 0.73695,0.960704 1.2554,1.089536 l -0.0935,-11.950628 z"
+       style="fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4838-7-1-2)" />
+  </g>
+</svg>

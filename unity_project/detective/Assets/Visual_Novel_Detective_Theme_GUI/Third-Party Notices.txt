@@ -1,0 +1,21 @@
+Asset is governed by the Asset Store EULA; however, the following components are governed by the licenses indicated below:
+
+1. 16658645247_2f46299fbe_c.png 
+"Old railway bridge" by mirri_inc is marked with CC0 1.0 
+https://creativecommons.org/licenses/cc0/1.0/ 
+
+2. 32804605057_9930d34744_c.png
+"Lennakatten's railway" by Eklandet is marked with CC0 1.0 
+https://creativecommons.org/licenses/cc0/1.0/ 
+
+3. 40814873353_09813232be_c.png
+"20190505-3" by mkniebes is marked with CC0 1.0 
+https://creativecommons.org/licenses/cc0/1.0/ 
+
+4. man-3.png
+"Man portrait in the jungle" by Artem Beliaikin is marked with CC0 1.0 
+https://creativecommons.org/licenses/cc0/1.0/ 
+
+5. man-4.png
+"Bearded man portrait" by freestocks.org is marked with CC0 1.0
+https://creativecommons.org/licenses/cc0/1.0/ 
