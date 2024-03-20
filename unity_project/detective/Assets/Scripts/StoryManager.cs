@@ -1,91 +1,100 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 using UnityEngine;
+
+[System.Serializable]
+public class ConversationData
+{
+    public string characterID;
+    public string emotionStyle;
+    public int emotionIndex;
+    public string file_name_location;
+    public string line;
+    public string command;
+}
+
+[System.Serializable]
+public class ConversationSection
+{
+    public int sectionIndex;
+    public ConversationData[] conversationDatas; // 대화 데이터 배열 이름 변경
+    public string[] sectionCharacters; // 섹션 내 고유 캐릭터 ID 목록
+}
+
+[System.Serializable]
+public class CharacterData
+{
+    public string characterID;
+    public string characterName_korean;
+    public Color color;
+    public Character characterPrefab; // 캐릭터 프리팹 참조
+}
 
 public class StoryManager : MonoBehaviour
 {
-    // 대화 주인공을 정의하는 Enum
-    public enum ECharacter
+    public StoryPanel storyPanel;
+    public TextAsset xmlFile;
+    public List<ConversationSection> conversationSections = new List<ConversationSection>(); // 모든 대화 섹션 데이터를 저장하는 리스트
+    public CharacterData[] characterDatas;
+
+    void Start()
     {
-        Ryan,
-        Brian,
-        Kate,
-        Lisa,
-        Rachel,
-        Joseph
+        LoadConversationsFromXML();
+        InitializeStory();
     }
 
-    // 대화 주인공의 표정을 정의하는 Enum
-    public enum ECharacterExpression
+    void InitializeStory()
     {
-        Normal,
-        Happy,
-        Sad,
-        Angry,
-        Surprised
-    }
-
-    // 대화 주인공과 표정에 대한 정보를 저장하는 클래스
-    [System.Serializable]
-    public class CharacterInfo
-    {
-        public ECharacter character;
-        public ECharacterExpression expression;
-        public Sprite characterSprite;
-    }
-
-    // 대화 정보를 저장하는 클래스
-    [System.Serializable]
-    public class DialogueInfo
-    {
-        public CharacterInfo characterInfo;
-        [TextArea(3, 10)]
-        public string dialogueText;
-    }
-
-    // 대화 정보를 담는 배열
-    public DialogueInfo[] dialogues;
-
-    // 싱글톤 인스턴스
-    private static StoryManager instance;
-
-    // 싱글톤 인스턴스를 가져오는 프로퍼티
-    public static StoryManager Instance
-    {
-        get
+        // 스토리 시작시 첫 번째 대화 섹션으로 초기화
+        if (conversationSections.Any())
         {
-            // 인스턴스가 없을 경우에는 새로 생성
-            if (instance == null)
+            storyPanel.Initialize(conversationSections, this);
+        }
+    }
+
+    void LoadConversationsFromXML()
+    {
+        XDocument xmlDoc = XDocument.Parse(xmlFile.text);
+        var allElements = xmlDoc.Element("data").Elements();
+
+        foreach (var sectionElement in allElements)
+        {
+            // 언더바 두 개를 가진 태그는 무시합니다.
+            if (sectionElement.Name.ToString().StartsWith("__")) continue;
+
+            int sectionIndex = int.Parse(sectionElement.Name.ToString().Substring(1)); // "_0", "_1" 등에서 숫자 추출
+
+            List<ConversationData> conversationDataList = new List<ConversationData>();
+            HashSet<string> characterIds = new HashSet<string>();
+
+            foreach (var item in sectionElement.Elements())
             {
-                GameObject go = new GameObject("StoryManager");
-                instance = go.AddComponent<StoryManager>();
+                var conversationData = new ConversationData
+                {
+                    characterID = item.Element("character_id")?.Value,
+                    emotionStyle = item.Element("emotion_style")?.Value,
+                    emotionIndex = (int?)item.Element("emotion_index") ?? 0,
+                    file_name_location = item.Element("file_name_location")?.Value,
+                    line = item.Element("line")?.Value,
+                    command = item.Element("command")?.Value
+                };
+
+                conversationDataList.Add(conversationData);
+                characterIds.Add(conversationData.characterID);
             }
-            return instance;
-        }
-    }
 
-    private void Awake()
-    {
-        // 인스턴스가 이미 존재하는 경우, 새로 생성하지 않고 기존 인스턴스를 사용
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // 씬 전환 시 파괴되지 않도록 설정
-        }
-    }
-
-    // 특정 대화를 가져오는 메서드
-    public DialogueInfo GetDialogue(ECharacter character, ECharacterExpression expression)
-    {
-        foreach (DialogueInfo dialogue in dialogues)
-        {
-            if (dialogue.characterInfo.character == character && dialogue.characterInfo.expression == expression)
+            conversationSections.Add(new ConversationSection
             {
-                return dialogue;
-            }
+                sectionIndex = sectionIndex,
+                conversationDatas = conversationDataList.ToArray(),
+                sectionCharacters = characterIds.Where(id => !string.IsNullOrEmpty(id)).ToArray()
+            });
         }
-        return null; // 해당 캐릭터와 표정에 대한 대화가 없을 경우
+    }
+
+    public CharacterData GetCharacterData(string characterID)
+    {
+        return characterDatas.FirstOrDefault(cd => cd.characterID == characterID);
     }
 }

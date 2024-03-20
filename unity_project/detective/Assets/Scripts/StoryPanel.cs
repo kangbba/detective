@@ -1,66 +1,119 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Collections;
-using UnityEngine.EventSystems;
 
 public class StoryPanel : MonoBehaviour
 {
-    public Image storyBackgroundImg;
-    public TextMeshProUGUI storyText;
-    public float textSpeed = 0.05f;
+    private StoryManager storyManager;
+    public TextMeshProUGUI characterText;
+    public TextMeshProUGUI lineText;
+    public float textSpeed = 0.03f;
 
-    private string[] storySentences;
-    private int currentSentenceIndex = 0;
-    private Coroutine displayCoroutine;
+    private List<ConversationSection> conversationSections; // 대화 섹션들을 저장할 리스트
 
-    // Variables for testing
-    public Sprite testBackSpr;
-    public string testStoryStr;
+    public Image characterPanel;
+    public Image backgroundPanel;
+    public StoryBackground backgroundImagePrefab; // 배경 이미지 프리팹 참조
+    private StoryBackground curStoryBackground; // 현재 배경 인스턴스
 
-    // Start is called before the first frame update
-    void Start()
+    private bool isTyping = false; // 타이핑 진행 중인지를 나타내는 플래그
+
+    public void Initialize(List<ConversationSection> newConversationSections, StoryManager manager)
     {
-        InitializeStorySentences(testStoryStr);
-        DisplayCurrentSentence();
+        storyManager = manager;
+        conversationSections = newConversationSections;
+        StartCoroutine(DisplayConversationSectionsCoroutine());
     }
 
-    // Initialize the story sentences array
-    private void InitializeStorySentences(string story)
+    private IEnumerator DisplayConversationSectionsCoroutine()
     {
-        storySentences = story.Split('.');
-        // Add the '.' back to each sentence
-        for (int i = 0; i < storySentences.Length; i++)
+        foreach (var section in conversationSections)
         {
-            storySentences[i] += ".";
+            Debug.Log($"Starting section {section.sectionIndex} with characters: {string.Join(", ", section.sectionCharacters)}");
+
+            foreach (var conversationData in section.conversationDatas)
+            {
+                SetBackgroundImage(conversationData.file_name_location);
+                SetCharacterText(conversationData.characterID);
+
+                isTyping = true;
+                StartCoroutine(TypeLine(conversationData.line));
+
+                bool waitForNextLine = false;
+                while (!waitForNextLine)
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        if (isTyping)
+                        {
+                            lineText.text = conversationData.line; // Immediately finish typing
+                            isTyping = false;
+                        }
+                        else
+                        {
+                            waitForNextLine = true; // Move to the next line
+                        }
+                    }
+                    yield return null;
+                }
+            }
+
+            // Optionally add a delay or transition between sections
+            yield return new WaitForSeconds(1f); // Wait before starting next section
         }
     }
 
-    // Display the current sentence
-    private void DisplayCurrentSentence()
+    private void SetCharacterText(string characterID)
     {
-        if (currentSentenceIndex < storySentences.Length)
+        StoryManager.CharacterData characterData = storyManager.GetCharacterData(characterID);
+        if (characterData != null)
         {
-            displayCoroutine = StartCoroutine(DisplayTextCoroutine(storySentences[currentSentenceIndex]));
+            characterText.text = characterData.characterName_korean;
+            characterText.color = characterData.color;
         }
         else
         {
-            // All sentences displayed, do something else (e.g., load the next scene)
-            Debug.Log("All sentences displayed");
+            characterText.text = "Unknown Character";
+            characterText.color = Color.white;
         }
     }
 
-    // Coroutine to display text gradually
-    private IEnumerator DisplayTextCoroutine(string sentence)
+    private void SetBackgroundImage(string fileName)
     {
-        for (int i = 0; i < sentence.Length; i++)
+        if (!string.IsNullOrEmpty(fileName))
         {
-            storyText.text += sentence[i];
+            Sprite newSprite = Resources.Load<Sprite>($"Backgrounds/{fileName}");
+            if (newSprite)
+            {
+                if (curStoryBackground != null)
+                {
+                    Destroy(curStoryBackground.gameObject); // Remove the old background
+                }
+                StoryBackground newBackground = Instantiate(backgroundImagePrefab, backgroundPanel.transform).GetComponent<StoryBackground>();
+                newBackground.Initialize(newSprite);
+                curStoryBackground = newBackground;
+            }
+            else
+            {
+                Debug.LogWarning("Background image not found: " + fileName);
+            }
+        }
+    }
+
+    private IEnumerator TypeLine(string line)
+    {
+        lineText.text = ""; // Clear the text
+        foreach (char letter in line)
+        {
+            if (!isTyping)
+            {
+                yield break; // Stop typing if isTyping turned off
+            }
+            lineText.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
-        // Wait for mouse click to proceed to the next sentence
-        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-        currentSentenceIndex++;
-        DisplayCurrentSentence();
+        isTyping = false; // Finish typing
     }
 }

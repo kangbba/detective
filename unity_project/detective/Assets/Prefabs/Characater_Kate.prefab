@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2044279854299396846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2542256527833242272}
+  - component: {fileID: 6679280880548746272}
+  - component: {fileID: 916438143767704206}
+  - component: {fileID: 2446660006968347175}
+  m_Layer: 5
+  m_Name: Characater_Kate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2542256527833242272
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044279854299396846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5000513363065706703}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6679280880548746272
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044279854299396846}
+  m_CullTransparentMesh: 1
+--- !u!114 &916438143767704206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044279854299396846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2446660006968347175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044279854299396846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3328fbd00384fb6ab1842060061644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterImg: {fileID: 294858322037508665}
+  characterName: Kate
+  emotionDatas:
+  - emotionStyle: Normal
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_897e2649-cd33-4c7c-8bdf-e822bc39330a
+  - emotionStyle: Smile
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_897e2649-cd33-4c7c-8bdf-e822bc39330a
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__0dbea81b-d8ea-445a-8cbd-d9731fb3c8e3
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__b1116da9-9b01-4ae3-8dee-105e85464d07
+    - ensayne_imaginehttpscdn.discordapp.comattachments1217488335828_9cf43df3-a3a7-486c-b886-cb937af185d5
+    - ensayne_imagineimaginehttpscdn.discordapp.comattachments121748_05650627-3276-43a3-a8d1-7df7618b7211
+  - emotionStyle: Happy
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_d7f3c2c8-d50b-4210-beff-f6adccdbb9c7
+  - emotionStyle: Sad
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_338fad07-509f-4c12-b6bd-bef4fd1fa32c
+  - emotionStyle: Crying
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__e9dba280-ce6d-4897-ae36-7b1368e9f4e3
+    - ensayne_full_body_shot_black_outline_cute_hands_on_waist_26_ye_1292d9b4-106f-40b9-96dc-6348361c5e71
+  - emotionStyle: Surprised
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_5e2609de-8240-4f6c-a2bb-deba62eb0e1c
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_3bc8d8e7-094b-44f5-9a7f-147e8ad72a9e
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_96a101a9-b70d-4d97-b2f7-2cc6776d85cf
+  - emotionStyle: Scared
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_hands_back_26_year-o_17d445b2-c12d-4e56-aae2-e1f4c6c1f5b7
+  - emotionStyle: Angry
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_arm_crossed_26_year-_129cce1b-ae0b-40a2-ad60-e902b71f716f
+    - ensayne_full_body_shot_black_outline_cute_arm_crossed_26_year-_ddd85572-b0f7-4930-bc43-f4e1345c753b
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__6c98b2df-a2a6-4e05-9a60-6df7ac333f49
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__4706c529-9c12-469e-ad79-248177079a53
+    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__edea0d87-f624-4ff5-a44e-ac95542ce550
+  - emotionStyle: Stumped
+    emotionFileNames:
+    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_70012dab-88ab-4e29-9a47-08e6f2966075
+--- !u!1 &2692476059837332279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5000513363065706703}
+  - component: {fileID: 2734166377005835039}
+  - component: {fileID: 294858322037508665}
+  m_Layer: 5
+  m_Name: characterImg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5000513363065706703
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692476059837332279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2542256527833242272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2734166377005835039
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692476059837332279}
+  m_CullTransparentMesh: 1
+--- !u!114 &294858322037508665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692476059837332279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
