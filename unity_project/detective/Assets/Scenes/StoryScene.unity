@@ -302,29 +302,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyPanel: {fileID: 743296232}
+  sections: []
   xmlFile: {fileID: 4900000, guid: 6d706667223114630929e64a33286682, type: 3}
   characterDatas:
-  - characterName: Mono
-    characterName_korean: "\uB3C5\uBC31"
+  - characterID: Mono
+    characterName: "\uB3C5\uBC31"
     color: {r: 1, g: 1, b: 1, a: 0}
-  - characterName: Ryan
-    characterName_korean: "\uB77C\uC774\uC5B8"
+    characterPrefab: {fileID: 0}
+  - characterID: Ryan
+    characterName: "\uB77C\uC774\uC5B8"
     color: {r: 0.6179246, g: 0.895486, b: 1, a: 1}
-  - characterName: Brian
-    characterName_korean: "\uBE0C\uB77C\uC774\uC5B8"
+    characterPrefab: {fileID: 0}
+  - characterID: Brian
+    characterName: "\uBE0C\uB77C\uC774\uC5B8"
     color: {r: 0.15264986, g: 0.990566, b: 0.023362402, a: 1}
-  - characterName: Kate
-    characterName_korean: "\uCF00\uC774\uD2B8"
+    characterPrefab: {fileID: 2446660006968347175, guid: 330fbee22e4024bf9ad98a4621080148, type: 3}
+  - characterID: Kate
+    characterName: "\uCF00\uC774\uD2B8"
     color: {r: 1, g: 0.8365737, b: 0, a: 1}
-  - characterName: Lisa
-    characterName_korean: "\uB9AC\uC0AC"
+    characterPrefab: {fileID: 2446660006968347175, guid: aba3fb0a088624e23b20b6f60d9b652e, type: 3}
+  - characterID: Lisa
+    characterName: "\uB9AC\uC0AC"
     color: {r: 0.7830189, g: 0.44691172, b: 0.5982479, a: 1}
-  - characterName: Joseph
-    characterName_korean: "\uC870\uC149"
-    color: {r: 0.9254902, g: 0.83137256, b: 0.7647059, a: 1}
-  - characterName: Tom
-    characterName_korean: "\uD1B0"
+    characterPrefab: {fileID: 2446660006968347175, guid: 54d90a177b53045d1ae66f74055216d7, type: 3}
+  - characterID: Tom
+    characterName: "\uD1B0"
     color: {r: 0.57254905, g: 0.5921569, b: 0.79607844, a: 1}
+    characterPrefab: {fileID: 2446660006968347175, guid: 325de43fe22bb44639c13d8e2d32851d, type: 3}
+  - characterID: Joseph
+    characterName: "\uC870\uC149"
+    color: {r: 0.8584906, g: 0.55818665, b: 0.44949272, a: 1}
+    characterPrefab: {fileID: 2446660006968347175, guid: 9274aa95fe99c4d15983e67ae227a085, type: 3}
 --- !u!1 &245977738
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,8 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterText: {fileID: 1423830764}
   lineText: {fileID: 202169015}
-  textSpeed: 0.05
-  characterPanel: {fileID: 0}
+  characterPanel: {fileID: 526643053}
   backgroundPanel: {fileID: 245977739}
   backgroundImagePrefab: {fileID: 8064783833415762980, guid: c305fe4962d8743d2a36eff73ca2ab46, type: 3}
 --- !u!114 &743296233

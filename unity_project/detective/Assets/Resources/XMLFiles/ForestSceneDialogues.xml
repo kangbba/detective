@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
   <__1>
-    <_0>
+    <_>
+      <section_index>0</section_index>
+      <show_characters>false</show_characters>
       <file_name_location>ensayne_change_to_ocean_landscape_outside_93d61b21-5ca3-4a5e-b06c-1aed27c7d333</file_name_location>
       <character_id>Mono</character_id>
       <emotion_style>Normal</emotion_style>
       <emotion_index>0</emotion_index>
       <line>문이 열리자 소리와 함께 신선한 바다 바람이 내부로 스며든다.</line>
       <command />
-    </_0>
+    </_>
     <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
       <character_id>Kate</character_id>
       <emotion_style>Smile</emotion_style>
@@ -18,6 +22,8 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
       <character_id>Joseph</character_id>
       <emotion_style>Smile</emotion_style>
@@ -26,39 +32,39 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
-      <character_id>Kate</character_id>
+      <character_id>Lisa</character_id>
       <emotion_style>Smile</emotion_style>
       <emotion_index>1</emotion_index>
       <line>물론이죠 조셉 할아버지! 오늘 날씨도 좋고, 여기 와서 커피 한 잔하면 기분이 업될 것 같아서 바로 달려왔죠!</line>
       <command />
     </_>
     <_>
-      <file_name_location />
-      <character_id>Tom</character_id>
-      <emotion_style>Smile</emotion_style>
-      <emotion_index>0</emotion_index>
-      <line>안녕하세요, 오늘도 좋은 커피 부탁드려요.</line>
-      <command />
-    </_>
-    <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
       <character_id>Joseph</character_id>
       <emotion_style>Smile</emotion_style>
-      <emotion_index>0</emotion_index>
+      <emotion_index>1</emotion_index>
       <line>물론이지! 커피는 곧 나올 거야. 오늘도 맛있게 만들어줄테니 즐거운 시간 보내고 가려무나.</line>
       <command />
     </_>
-    <_1>
+    <_>
+      <section_index>1</section_index>
+      <show_characters>false</show_characters>
       <file_name_location>ensayne_email_screen_f1b93f60-7905-4f1b-9845-1ed654db7237</file_name_location>
       <character_id>Mono</character_id>
       <emotion_style>Normal</emotion_style>
       <emotion_index>0</emotion_index>
       <line>리사가 눈을 크게 뜨고 믿을 수 없다는 듯이 말한다.</line>
       <command />
-    </_1>
+    </_>
     <_>
-      <file_name_location />
+      <section_index />
+      <show_characters>true</show_characters>
+      <file_name_location>ensayne_change_to_ocean_landscape_outside_93d61b21-5ca3-4a5e-b06c-1aed27c7d333</file_name_location>
       <character_id>Lisa</character_id>
       <emotion_style>Surprised</emotion_style>
       <emotion_index>0</emotion_index>
@@ -66,6 +72,8 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
       <character_id>Tom</character_id>
       <emotion_style>Normal</emotion_style>
@@ -75,7 +83,9 @@
       <command />
     </_>
     <_>
-      <file_name_location>ensayne_email_screen_f1b93f60-7905-4f1b-9845-1ed654db7238</file_name_location>
+      <section_index />
+      <show_characters>true</show_characters>
+      <file_name_location />
       <character_id>Kate</character_id>
       <emotion_style>Happy</emotion_style>
       <emotion_index>0</emotion_index>
@@ -84,6 +94,8 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
       <character_id>Tom</character_id>
       <emotion_style>Stumped</emotion_style>
@@ -93,22 +105,28 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>true</show_characters>
       <file_name_location />
       <character_id>Lisa</character_id>
-      <emotion_style>Normal</emotion_style>
+      <emotion_style>Sad</emotion_style>
       <emotion_index>0</emotion_index>
       <line>맞아... 레이첼이 우리에게 실망하면 어쩌지..</line>
       <command />
     </_>
-    <_2>
+    <_>
+      <section_index>2</section_index>
+      <show_characters>false</show_characters>
       <file_name_location>ensayne_25_year-old_man_is_typing_macbook_focus_on_hands_ff7ca4ad-8d45-4ee8-b433-36466dbc58bf</file_name_location>
       <character_id>Mono</character_id>
       <emotion_style>Normal</emotion_style>
       <emotion_index>0</emotion_index>
       <line>이제 팀은 레이첼 블랙에게 보낼 답장을 고민하기 시작한다. 그들은 흥분과 조심스러움 사이에서 최선의 방법을 찾으려고 한다. 그리고 답장을 보낸다.</line>
       <command />
-    </_2>
+    </_>
     <_>
+      <section_index />
+      <show_characters>false</show_characters>
       <file_name_location />
       <character_id>Mono</character_id>
       <emotion_style>Normal</emotion_style>
@@ -117,6 +135,8 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>false</show_characters>
       <file_name_location />
       <character_id>Mono</character_id>
       <emotion_style>Normal</emotion_style>
@@ -125,6 +145,8 @@
       <command />
     </_>
     <_>
+      <section_index />
+      <show_characters>false</show_characters>
       <file_name_location />
       <character_id>Mono</character_id>
       <emotion_style>Normal</emotion_style>

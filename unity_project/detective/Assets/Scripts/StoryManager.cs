@@ -3,98 +3,114 @@ using System.Linq;
 using System.Xml.Linq;
 using UnityEngine;
 
-[System.Serializable]
-public class ConversationData
-{
-    public string characterID;
-    public string emotionStyle;
-    public int emotionIndex;
-    public string file_name_location;
-    public string line;
-    public string command;
-}
-
-[System.Serializable]
-public class ConversationSection
-{
-    public int sectionIndex;
-    public ConversationData[] conversationDatas; // 대화 데이터 배열 이름 변경
-    public string[] sectionCharacters; // 섹션 내 고유 캐릭터 ID 목록
-}
-
-[System.Serializable]
-public class CharacterData
-{
-    public string characterID;
-    public string characterName_korean;
-    public Color color;
-    public Character characterPrefab; // 캐릭터 프리팹 참조
-}
-
 public class StoryManager : MonoBehaviour
 {
     public StoryPanel storyPanel;
+    public List<Section> sections = new List<Section>();
     public TextAsset xmlFile;
-    public List<ConversationSection> conversationSections = new List<ConversationSection>(); // 모든 대화 섹션 데이터를 저장하는 리스트
-    public CharacterData[] characterDatas;
+
+    [System.Serializable]
+    public class Section
+    {
+        public int sectionIndex;
+        public List<ConversationData> conversationDatas;
+        public List<string> sectionCharacters;
+    }
+
+    [System.Serializable]
+    public class ConversationData
+    {
+        public string file_name_location;
+        public bool showCharacters;
+        public string characterID;
+        public string emotionStyle;
+        public int emotionIndex;
+        public string line;
+        public string command;
+    }
+
+    [System.Serializable]
+    public class CharacterData
+    {
+        public string characterID;
+        public string characterName;
+        public Color color;
+        public Character characterPrefab;
+    }
+
+    public List<CharacterData> characterDatas = new List<CharacterData>();
 
     void Start()
     {
         LoadConversationsFromXML();
-        InitializeStory();
-    }
-
-    void InitializeStory()
-    {
-        // 스토리 시작시 첫 번째 대화 섹션으로 초기화
-        if (conversationSections.Any())
-        {
-            storyPanel.Initialize(conversationSections, this);
-        }
     }
 
     void LoadConversationsFromXML()
     {
         XDocument xmlDoc = XDocument.Parse(xmlFile.text);
-        var allElements = xmlDoc.Element("data").Elements();
+        var dialogues = xmlDoc.Element("data").Element("__1").Elements("_");
 
-        foreach (var sectionElement in allElements)
+        Section currentSection = null;
+
+        foreach (var dialogue in dialogues)
         {
-            // 언더바 두 개를 가진 태그는 무시합니다.
-            if (sectionElement.Name.ToString().StartsWith("__")) continue;
+            var sectionIndexString = dialogue.Element("section_index")?.Value;
 
-            int sectionIndex = int.Parse(sectionElement.Name.ToString().Substring(1)); // "_0", "_1" 등에서 숫자 추출
+            if (!string.IsNullOrEmpty(sectionIndexString) && int.TryParse(sectionIndexString, out int sectionIndex))
+            {
+                // If new section starts, save the old section and start a new one
+                if (currentSection != null && currentSection.sectionIndex != sectionIndex)
+                {
+                    sections.Add(currentSection);
+                }
+                if (currentSection == null || currentSection.sectionIndex != sectionIndex)
+                {
+                    currentSection = new Section
+                    {
+                        sectionIndex = sectionIndex,
+                        conversationDatas = new List<ConversationData>(),
+                        sectionCharacters = new List<string> { }
+                    };
+                }
+            }
 
-            List<ConversationData> conversationDataList = new List<ConversationData>();
-            HashSet<string> characterIds = new HashSet<string>();
-
-            foreach (var item in sectionElement.Elements())
+            if (currentSection != null)
             {
                 var conversationData = new ConversationData
                 {
-                    characterID = item.Element("character_id")?.Value,
-                    emotionStyle = item.Element("emotion_style")?.Value,
-                    emotionIndex = (int?)item.Element("emotion_index") ?? 0,
-                    file_name_location = item.Element("file_name_location")?.Value,
-                    line = item.Element("line")?.Value,
-                    command = item.Element("command")?.Value
+                    showCharacters = bool.TryParse(dialogue.Element("show_characters")?.Value, out bool showCharacters) ? showCharacters : true,
+                    file_name_location = dialogue.Element("file_name_location")?.Value,
+                    characterID = dialogue.Element("character_id")?.Value,
+                    emotionStyle = dialogue.Element("emotion_style")?.Value,
+                    emotionIndex = int.TryParse(dialogue.Element("emotion_index")?.Value, out int index) ? index : 0,
+                    line = dialogue.Element("line")?.Value,
+                    command = dialogue.Element("command")?.Value
                 };
 
-                conversationDataList.Add(conversationData);
-                characterIds.Add(conversationData.characterID);
+                currentSection.conversationDatas.Add(conversationData);
+                currentSection.sectionCharacters = currentSection.conversationDatas.Select(d => d.characterID).Distinct().ToList();
             }
-
-            conversationSections.Add(new ConversationSection
-            {
-                sectionIndex = sectionIndex,
-                conversationDatas = conversationDataList.ToArray(),
-                sectionCharacters = characterIds.Where(id => !string.IsNullOrEmpty(id)).ToArray()
-            });
         }
+
+        // Add the last section to the list
+        if (currentSection != null)
+        {
+            sections.Add(currentSection);
+        }
+        storyPanel.Initialize(this);
+
+        Debug.Log($"Finished loading {sections.Count} sections from XML.");
     }
 
     public CharacterData GetCharacterData(string characterID)
     {
-        return characterDatas.FirstOrDefault(cd => cd.characterID == characterID);
+        for(int i = 0; i < characterDatas.Count; i++)
+        {
+            if (characterDatas[i].characterID == characterID)
+            {
+                return characterDatas[i];
+            }
+        }
+        return null;
     }
 }

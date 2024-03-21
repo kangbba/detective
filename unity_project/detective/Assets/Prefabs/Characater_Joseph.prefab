@@ -34,8 +34,8 @@ RectTransform:
   - {fileID: 5000513363065706703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -90,12 +90,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterImg: {fileID: 294858322037508665}
-  characterName: Joseph
+  _characterID: Joseph
   emotionDatas:
-  - emotionStyle: 
-    emotionFileNames: []
-  - emotionStyle: 
-    emotionFileNames: []
+  - emotionStyle: Normal
+    emotionFileNames:
+    - ensayne_middle_aged_man_full_body_shot_white_hair_cafe_apron_s_711849e7-b45d-47bb-ab61-1043da65fdbd
+  - emotionStyle: Smile
+    emotionFileNames:
+    - ensayne_middle_aged_man_full_body_shot_white_hair_cafe_apron_s_711849e7-b45d-47bb-ab61-1043da65fdbd
+    - ensayne_middle_aged_man_full_body_shot_white_hair_cafe_apron_h_7af59ac7-1586-4478-b100-246cb439dc45
 --- !u!1 &2692476059837332279
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,14 +126,14 @@ RectTransform:
   m_GameObject: {fileID: 2692476059837332279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.23, y: 0.23, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2542256527833242272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -309}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2734166377005835039
