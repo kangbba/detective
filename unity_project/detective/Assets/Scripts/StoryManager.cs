@@ -14,17 +14,16 @@ public class StoryManager : MonoBehaviour
     {
         public int sectionIndex;
         public List<ConversationData> conversationDatas;
-        public List<string> sectionCharacters;
+        public List<string> sectionCharacterNames;
     }
 
     [System.Serializable]
     public class ConversationData
     {
-        public string file_name_location;
         public bool showCharacters;
+        public string backgroundID;
         public string characterID;
-        public string emotionStyle;
-        public int emotionIndex;
+        public string emotionID;
         public string line;
         public string command;
     }
@@ -32,8 +31,8 @@ public class StoryManager : MonoBehaviour
     [System.Serializable]
     public class CharacterData
     {
-        public string characterID;
-        public string characterName;
+        public string character_id;
+        public string characterName_ko;
         public Color color;
         public Character characterPrefab;
     }
@@ -54,9 +53,9 @@ public class StoryManager : MonoBehaviour
 
         foreach (var dialogue in dialogues)
         {
-            var sectionIndexString = dialogue.Element("section_index")?.Value;
+            var sectionIndexStr = dialogue.Element("section_index")?.Value;
 
-            if (!string.IsNullOrEmpty(sectionIndexString) && int.TryParse(sectionIndexString, out int sectionIndex))
+            if (!string.IsNullOrEmpty(sectionIndexStr) && int.TryParse(sectionIndexStr, out int sectionIndex))
             {
                 // If new section starts, save the old section and start a new one
                 if (currentSection != null && currentSection.sectionIndex != sectionIndex)
@@ -69,7 +68,7 @@ public class StoryManager : MonoBehaviour
                     {
                         sectionIndex = sectionIndex,
                         conversationDatas = new List<ConversationData>(),
-                        sectionCharacters = new List<string> { }
+                        sectionCharacterNames = new List<string> { }
                     };
                 }
             }
@@ -79,16 +78,15 @@ public class StoryManager : MonoBehaviour
                 var conversationData = new ConversationData
                 {
                     showCharacters = bool.TryParse(dialogue.Element("show_characters")?.Value, out bool showCharacters) ? showCharacters : true,
-                    file_name_location = dialogue.Element("file_name_location")?.Value,
+                    backgroundID = dialogue.Element("background_id")?.Value,
                     characterID = dialogue.Element("character_id")?.Value,
-                    emotionStyle = dialogue.Element("emotion_style")?.Value,
-                    emotionIndex = int.TryParse(dialogue.Element("emotion_index")?.Value, out int index) ? index : 0,
+                    emotionID = dialogue.Element("emotion_id")?.Value,
                     line = dialogue.Element("line")?.Value,
                     command = dialogue.Element("command")?.Value
                 };
 
                 currentSection.conversationDatas.Add(conversationData);
-                currentSection.sectionCharacters = currentSection.conversationDatas.Select(d => d.characterID).Distinct().ToList();
+                currentSection.sectionCharacterNames = currentSection.conversationDatas.Select(d => d.characterID).Distinct().ToList();
             }
         }
 
@@ -106,7 +104,7 @@ public class StoryManager : MonoBehaviour
     {
         for(int i = 0; i < characterDatas.Count; i++)
         {
-            if (characterDatas[i].characterID == characterID)
+            if (characterDatas[i].character_id == characterID)
             {
                 return characterDatas[i];
             }

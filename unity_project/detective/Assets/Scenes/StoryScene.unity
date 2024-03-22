@@ -305,34 +305,38 @@ MonoBehaviour:
   sections: []
   xmlFile: {fileID: 4900000, guid: 6d706667223114630929e64a33286682, type: 3}
   characterDatas:
-  - characterID: Mono
-    characterName: "\uB3C5\uBC31"
+  - character_id: 
+    characterName_ko: 
     color: {r: 1, g: 1, b: 1, a: 0}
     characterPrefab: {fileID: 0}
-  - characterID: Ryan
-    characterName: "\uB77C\uC774\uC5B8"
+  - character_id: Ryan
+    characterName_ko: "\uB77C\uC774\uC5B8"
     color: {r: 0.6179246, g: 0.895486, b: 1, a: 1}
     characterPrefab: {fileID: 0}
-  - characterID: Brian
-    characterName: "\uBE0C\uB77C\uC774\uC5B8"
+  - character_id: Brian
+    characterName_ko: "\uBE0C\uB77C\uC774\uC5B8"
     color: {r: 0.15264986, g: 0.990566, b: 0.023362402, a: 1}
     characterPrefab: {fileID: 2446660006968347175, guid: 330fbee22e4024bf9ad98a4621080148, type: 3}
-  - characterID: Kate
-    characterName: "\uCF00\uC774\uD2B8"
+  - character_id: Kate
+    characterName_ko: "\uCF00\uC774\uD2B8"
     color: {r: 1, g: 0.8365737, b: 0, a: 1}
     characterPrefab: {fileID: 2446660006968347175, guid: aba3fb0a088624e23b20b6f60d9b652e, type: 3}
-  - characterID: Lisa
-    characterName: "\uB9AC\uC0AC"
-    color: {r: 0.7830189, g: 0.44691172, b: 0.5982479, a: 1}
+  - character_id: Lisa
+    characterName_ko: "\uB9AC\uC0AC"
+    color: {r: 0.9433962, g: 0.6719473, b: 0.6719473, a: 1}
     characterPrefab: {fileID: 2446660006968347175, guid: 54d90a177b53045d1ae66f74055216d7, type: 3}
-  - characterID: Tom
-    characterName: "\uD1B0"
+  - character_id: Tom
+    characterName_ko: "\uD1B0"
     color: {r: 0.57254905, g: 0.5921569, b: 0.79607844, a: 1}
     characterPrefab: {fileID: 2446660006968347175, guid: 325de43fe22bb44639c13d8e2d32851d, type: 3}
-  - characterID: Joseph
-    characterName: "\uC870\uC149"
-    color: {r: 0.8584906, g: 0.55818665, b: 0.44949272, a: 1}
+  - character_id: Joseph
+    characterName_ko: "\uC870\uC149"
+    color: {r: 0.85882354, g: 0.6005627, b: 0.4509804, a: 1}
     characterPrefab: {fileID: 2446660006968347175, guid: 9274aa95fe99c4d15983e67ae227a085, type: 3}
+  - character_id: Rachel
+    characterName_ko: "\uB808\uC774\uCCBC"
+    color: {r: 1, g: 0.514151, b: 0.9748955, a: 1}
+    characterPrefab: {fileID: 2446660006968347175, guid: 02ad2c63681e147bf9b464d772afe189, type: 3}
 --- !u!1 &245977738
 GameObject:
   m_ObjectHideFlags: 0

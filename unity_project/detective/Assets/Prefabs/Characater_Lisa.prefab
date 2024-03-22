@@ -90,41 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterImg: {fileID: 294858322037508665}
-  _characterID: Lisa
-  emotionDatas:
-  - emotionStyle: Normal
-    emotionFileNames:
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_e2f30eb3-3d5c-456e-abd3-da74a012837a
-  - emotionStyle: Smile
-    emotionFileNames:
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_e2f30eb3-3d5c-456e-abd3-da74a012837a
-  - emotionStyle: Happy
-    emotionFileNames:
-    - ensayne_remove_accessories_4c61594b-7f0f-4de5-bc12-bb47757cf59d
-    - ensayne_remove_accessories_b191ebea-1439-43f0-86e4-152ea3181dc9
-  - emotionStyle: Sad
-    emotionFileNames:
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_09a4500e-1e1b-427a-9d0b-c66f3c5017d3
-  - emotionStyle: Crying
-    emotionFileNames:
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_09a4500e-1e1b-427a-9d0b-c66f3c5017d3
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_3690088b-bd7d-497b-b7f2-45967e7389f6
-  - emotionStyle: Surprised
-    emotionFileNames:
-    - ensayne__white_background_full-body-shot_arm_crossed_black_out_26fc9165-91d5-4d81-9baf-5c54686ea526
-    - ensayne__white_background_full-body-shot_arm_crossed_black_out_96f2d136-d38a-4510-8c09-fdbbd1b916a8
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_f2ab87a5-848a-4c89-a333-3cb70f0a6a9d
-  - emotionStyle: Scared
-    emotionFileNames:
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_3690088b-bd7d-497b-b7f2-45967e7389f6
-  - emotionStyle: Angry
-    emotionFileNames:
-    - ensayne__white_background_full-body-shot_arm_crossed_black_out_81527699-9181-4ef5-9f63-f034c6329469
-  - emotionStyle: Stumped
-    emotionFileNames:
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_3690088b-bd7d-497b-b7f2-45967e7389f6
-    - ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_aa533817-6bee-4e7c-9242-0b74898d908c
-    - ensayne_remove_earing_fdf7f9ff-b829-4c4a-aacd-44b74d34c108
 --- !u!1 &2692476059837332279
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +117,7 @@ RectTransform:
   m_GameObject: {fileID: 2692476059837332279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.47, y: 0.47, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2542256527833242272}

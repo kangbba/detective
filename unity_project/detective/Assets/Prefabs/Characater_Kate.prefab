@@ -90,46 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterImg: {fileID: 294858322037508665}
-  _characterID: Kate
-  emotionDatas:
-  - emotionStyle: Normal
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_897e2649-cd33-4c7c-8bdf-e822bc39330a
-  - emotionStyle: Smile
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_897e2649-cd33-4c7c-8bdf-e822bc39330a
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__0dbea81b-d8ea-445a-8cbd-d9731fb3c8e3
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__b1116da9-9b01-4ae3-8dee-105e85464d07
-    - ensayne_imaginehttpscdn.discordapp.comattachments1217488335828_9cf43df3-a3a7-486c-b886-cb937af185d5
-    - ensayne_imagineimaginehttpscdn.discordapp.comattachments121748_05650627-3276-43a3-a8d1-7df7618b7211
-  - emotionStyle: Happy
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_d7f3c2c8-d50b-4210-beff-f6adccdbb9c7
-  - emotionStyle: Sad
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_338fad07-509f-4c12-b6bd-bef4fd1fa32c
-  - emotionStyle: Crying
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__e9dba280-ce6d-4897-ae36-7b1368e9f4e3
-    - ensayne_full_body_shot_black_outline_cute_hands_on_waist_26_ye_1292d9b4-106f-40b9-96dc-6348361c5e71
-  - emotionStyle: Surprised
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_5e2609de-8240-4f6c-a2bb-deba62eb0e1c
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_3bc8d8e7-094b-44f5-9a7f-147e8ad72a9e
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_96a101a9-b70d-4d97-b2f7-2cc6776d85cf
-  - emotionStyle: Scared
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_hands_back_26_year-o_17d445b2-c12d-4e56-aae2-e1f4c6c1f5b7
-  - emotionStyle: Angry
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_arm_crossed_26_year-_129cce1b-ae0b-40a2-ad60-e902b71f716f
-    - ensayne_full_body_shot_black_outline_cute_arm_crossed_26_year-_ddd85572-b0f7-4930-bc43-f4e1345c753b
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__6c98b2df-a2a6-4e05-9a60-6df7ac333f49
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__4706c529-9c12-469e-ad79-248177079a53
-    - ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__edea0d87-f624-4ff5-a44e-ac95542ce550
-  - emotionStyle: Stumped
-    emotionFileNames:
-    - ensayne_full_body_shot_black_outline_cute_26_year-old_long_blo_70012dab-88ab-4e29-9a47-08e6f2966075
 --- !u!1 &2692476059837332279
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +117,7 @@ RectTransform:
   m_GameObject: {fileID: 2692476059837332279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
+  m_LocalScale: {x: 0.32, y: 0.32, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2542256527833242272}
