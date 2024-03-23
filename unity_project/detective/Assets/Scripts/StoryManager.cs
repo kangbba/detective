@@ -24,7 +24,7 @@ public class StoryManager : MonoBehaviour
         public string characterID;
         public string emotionID;
         public string characterLocation;
-        public string line;
+        public string lines;
         public string command;
     }
 
@@ -81,7 +81,7 @@ public class StoryManager : MonoBehaviour
                     characterID = dialogue.Element("character_id")?.Value,
                     characterLocation = dialogue.Element("character_location")?.Value,
                     emotionID = dialogue.Element("emotion_id")?.Value,
-                    line = dialogue.Element("line")?.Value,
+                    lines = dialogue.Element("lines")?.Value,
                     command = dialogue.Element("command")?.Value
                 };
 

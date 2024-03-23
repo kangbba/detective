@@ -8,7 +8,9 @@ public class Character : MonoBehaviour
     private Image characterImg; // 캐릭터 이미지 UI 컴포넌트
 
     private string _characaterID; // 캐릭터 이름
+    private string _recentEmotionID; // 캐릭터 이름
     public string CharacterID { get { return _characaterID; } } // 캐릭터 이름
+    public string RecentEmotionID { get { return _recentEmotionID; } } // 캐릭터 이름
 
     private Coroutine fadeInCoroutine;
     private Coroutine fadeOutCoroutine;
@@ -20,6 +22,7 @@ public class Character : MonoBehaviour
         Sprite newSprite = Resources.Load<Sprite>($"Characters/{_characaterID}/{emotionID}");
         if (newSprite != null)
         {
+            _recentEmotionID = emotionID;
             characterImg.sprite = newSprite; // 적절한 스프라이트로 이미지 업데이트
             characterImg.SetNativeSize();
         }

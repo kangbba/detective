@@ -16,16 +16,16 @@ public class StoryPanel : MonoBehaviour
 
     public Image characterPanel;
     public Image backgroundPanel;
-    public StoryBackground backgroundImagePrefab; // 배경 이미지 프리팹 참조
-    private StoryBackground curStoryBackground; // 현재 배경 인스턴스
+    public StoryBackground backgroundImagePrefab; 
+    private StoryBackground curStoryBackground;
 
     private List<Character> inst_characters = new List<Character>();
-    private List<string> sectionCharacterNames = new List<string>(); // 현재 화면에 표시된 캐릭터들을 추적
-
+    private List<string> sectionCharacterNames = new List<string>(); 
+ 
     public void Initialize(StoryManager storyManager)
     {
-        this.storyManager = storyManager; // Assign the storyManager reference
-        StartCoroutine(DisplaySectionsCoroutine()); // Start displaying sections
+        this.storyManager = storyManager; 
+        StartCoroutine(DisplaySectionsCoroutine()); 
     }
 
     private IEnumerator DisplaySectionsCoroutine()
@@ -54,49 +54,49 @@ public class StoryPanel : MonoBehaviour
             // Display conversation data for this section
             foreach (ConversationData conversation in section.conversationDatas)
             {
+                var characterID = conversation.characterID;
+                var characterLocation = conversation.characterLocation;
+                var emotionID = conversation.emotionID;
+                var backgroundID = conversation.backgroundID;
+                var lines = conversation.lines;
+                CharacterData characterData = storyManager.GetCharacterData(characterID);
                 // 배경 갱신
-                if (!string.IsNullOrEmpty(conversation.backgroundID))
+                if (!string.IsNullOrEmpty(backgroundID))
                 {
-                    Debug.Log($"{conversation.backgroundID} 로 배경 갱신");
-                    SetBackgroundImage(conversation.backgroundID);
+                    Debug.Log($"{backgroundID} 로 배경 갱신");
+                    SetBackgroundImage(backgroundID);
                 }
                 else
                 {
 
                 }
-
-                var characterData = storyManager.GetCharacterData(conversation.characterID);
-                // Instantiate new characters that are entering the scene
-
-                if (!string.IsNullOrEmpty(conversation.characterID))
+                if (!string.IsNullOrEmpty(characterID))
                 {
-                    Character prevCharacter = inst_characters.FirstOrDefault(character => character.CharacterID == conversation.characterID);
+                    Character prevCharacter = inst_characters.FirstOrDefault(character => character.CharacterID == characterID);
                     if (prevCharacter != null)
                     {
                         inst_characters.Remove(prevCharacter);
                         prevCharacter.FadeOutAndDestroy(.3f);
                     }
-                    Character inst_character = InstantiateCharacter(conversation.characterID);
+                    Character inst_character = InstantiateCharacter(characterID);
                     if (inst_character != null)
                     {
-                        string characterLocation = conversation.characterLocation;
                         inst_character.transform.position = GetCharacterLocation(characterLocation);
-                        inst_character.Initialize(characterData.character_id);
+                        inst_character.Initialize(characterID);
                         inst_character.FadeOut(0f);
-                        inst_character.SetEmotionData(conversation.emotionID);
+                        inst_character.SetEmotionData(emotionID);
                         inst_character.FadeIn(.5f);
                         inst_characters.Add(inst_character);
-                        Debug.Log($"{characterData.characterName_ko} Saying : ");
-                        SetCharacterText(characterData);
                     }
                 }
                 else
                 {
                     Debug.LogError($"{conversation.characterID} 없음 ");
                 }
-
-                yield return StartCoroutine(TypeLine(conversation.line));
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+                // Instantiate new characters that are entering the scene
+                SetCharacterText(characterData);
+                string[] linesArray = lines.Split(';'); // 세미콜론을 기준으로 문자열을 쪼갭니다.
+                yield return StartCoroutine(TypeLines(linesArray));
             }
 
             yield return new WaitForSeconds(1f);
@@ -167,9 +167,24 @@ public class StoryPanel : MonoBehaviour
 
     }
 
-    private IEnumerator TypeLine(string line)
+    private IEnumerator TypeLines(string[] lines)
     {
         lineText.text = ""; // 초기 텍스트를 비웁니다.
+        foreach (string line in lines)
+        {
+            yield return StartCoroutine(TypeLine(line)); // 현재 줄을 타이핑합니다.
+
+            // 사용자가 클릭할 때까지 대기합니다.
+            // 마우스 버튼을 클릭하거나 특정 키를 누르는 등 원하는 입력 조건을 추가할 수 있습니다.
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+
+            // 다음 줄을 출력하기 전에 텍스트를 비울 수도 있습니다.
+            // lineText.text = "";
+        }
+    }
+
+    private IEnumerator TypeLine(string line)
+    {
         foreach (char letter in line)
         {
             lineText.text += letter; // 현재 문자를 텍스트에 추가합니다.
@@ -179,5 +194,6 @@ public class StoryPanel : MonoBehaviour
             }
         }
     }
+
 
 }
