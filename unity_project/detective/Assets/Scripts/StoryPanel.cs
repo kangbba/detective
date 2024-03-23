@@ -38,91 +38,61 @@ public class StoryPanel : MonoBehaviour
             sectionCharacterNames.RemoveAll(id => id == "Mono" || id == "Ryan");
 
             Debug.Log($"{section.sectionIndex}번째 섹션에 진입했습니다");
-            Debug.Log($"이전 캐릭터들: {string.Join(", ", prevCharacterNames)}");
-            Debug.Log($"새로운 캐릭터들: {string.Join(", ", sectionCharacterNames)}");
-
+            Debug.Log($"화면에 등장할 새로운 캐릭터들: {string.Join(", ", sectionCharacterNames)}");
            
             int sectionCount = sectionCharacterNames.Count;
 
-            // 등장하는 자리 계산
-            List<Vector3> sectionPositions = new List<Vector3>();
-            for (int i = 0; i < sectionCount; i++)
-            {
-                // Calculate the position based on the section index
-                float xPos = sectionCount == 1 ? Screen.width * .5f : Mathf.Lerp(Screen.width * .2f, Screen.width * .8f, (float)i / (sectionCount - 1));
-                float yPos = Screen.height / 2; // You can adjust the y position as needed
-                Vector3 position = new Vector3(xPos, yPos, 0);
-                sectionPositions.Add(position);
-            }
-
-            // Instantiate new characters that are entering the scene
+     
             for (int i = 0; i < inst_characters.Count; i++)
             {
+                Character character = inst_characters[i];
                 inst_characters[i].FadeOutAndDestroy(1f);
             }
+            inst_characters.Clear();
             yield return new WaitForSeconds(1.1f);
-
-            inst_characters = new List<Character>();
-            for (int i = 0; i < sectionCharacterNames.Count; i++)
-            {
-                var id = sectionCharacterNames[i];
-                var characterData = storyManager.GetCharacterData(id);
-                if (characterData != null && characterData.characterPrefab != null)
-                {
-                    var characterPrefab = characterData.characterPrefab.gameObject;
-                    Character character = Instantiate(characterPrefab, characterPanel.transform).GetComponent<Character>();
-                    character.Initialize(characterData.character_id);
-
-                    // Assign position based on section index
-                    int sectionIndex = i;
-                    character.transform.position = sectionPositions[sectionIndex];
-                    character.FadeOut(0f);
-                    inst_characters.Add(character);
-                }
-            }
-
 
             // Display conversation data for this section
             foreach (ConversationData conversation in section.conversationDatas)
             {
-                bool showCharacters = conversation.showCharacters;
-                var characterData = storyManager.GetCharacterData(conversation.characterID);
-                // Instantiate new characters that are entering the scene
-                Debug.Log($"ShowCharacters ? : {showCharacters}");
-                if (showCharacters)
-                {
-                    Debug.Log($"현재 존재하는 curCharacters {inst_characters.Count}"); 
-                    Character character = inst_characters.FirstOrDefault(character => character.CharacterID == conversation.characterID);
-                    if (character != null)
-                    {
-                        character.FadeIn(1f);
-                        character.SetEmotionData(conversation.emotionID);
-                    }
-                }
-                else
-                {
-                    for (int i = inst_characters.Count-1; i >= 0; i--)
-                    {
-                        Character character = inst_characters[i];
-                        character.FadeOut(1f);
-                    }
-                }
+                // 배경 갱신
                 if (!string.IsNullOrEmpty(conversation.backgroundID))
                 {
+                    Debug.Log($"{conversation.backgroundID} 로 배경 갱신");
                     SetBackgroundImage(conversation.backgroundID);
                 }
                 else
                 {
-                    Debug.LogWarning($"{conversation.backgroundID} 없음 ");
+
                 }
+
+                var characterData = storyManager.GetCharacterData(conversation.characterID);
+                // Instantiate new characters that are entering the scene
 
                 if (!string.IsNullOrEmpty(conversation.characterID))
                 {
-                    SetCharacterText(characterData);
+                    Character prevCharacter = inst_characters.FirstOrDefault(character => character.CharacterID == conversation.characterID);
+                    if (prevCharacter != null)
+                    {
+                        inst_characters.Remove(prevCharacter);
+                        prevCharacter.FadeOutAndDestroy(.3f);
+                    }
+                    Character inst_character = InstantiateCharacter(conversation.characterID);
+                    if (inst_character != null)
+                    {
+                        string characterLocation = conversation.characterLocation;
+                        inst_character.transform.position = GetCharacterLocation(characterLocation);
+                        inst_character.Initialize(characterData.character_id);
+                        inst_character.FadeOut(0f);
+                        inst_character.SetEmotionData(conversation.emotionID);
+                        inst_character.FadeIn(.5f);
+                        inst_characters.Add(inst_character);
+                        Debug.Log($"{characterData.characterName_ko} Saying : ");
+                        SetCharacterText(characterData);
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning($"{conversation.characterID} 없음 ");
+                    Debug.LogError($"{conversation.characterID} 없음 ");
                 }
 
                 yield return StartCoroutine(TypeLine(conversation.line));
@@ -131,6 +101,39 @@ public class StoryPanel : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             prevCharacterNames = section.sectionCharacterNames.ToList();
+        }
+    }
+    private Vector2 GetCharacterLocation(string characterLocation)
+    {
+        if(characterLocation == "Middle")
+        {
+            return new Vector2(Screen.width * .5f, Screen.height * .5f);
+        }
+        else if(characterLocation == "Left")
+        {
+            return new Vector2(Screen.width * .25f, Screen.height * .5f);
+        }
+        else if(characterLocation == "Right")
+        {
+            return new Vector2(Screen.width * .75f, Screen.height * .5f);
+        }
+        else
+        {
+            return default;
+        }
+    }
+    private Character InstantiateCharacter(string characterID)
+    {
+        var characterData = storyManager.GetCharacterData(characterID);
+        if (characterData != null && characterData.characterPrefab != null)
+        {
+            var characterPrefab = characterData.characterPrefab.gameObject;
+            Character character = Instantiate(characterPrefab, characterPanel.transform).GetComponent<Character>();
+            return character;
+        }
+        else
+        {
+            return null;
         }
     }
 

@@ -20,10 +20,10 @@ public class StoryManager : MonoBehaviour
     [System.Serializable]
     public class ConversationData
     {
-        public bool showCharacters;
         public string backgroundID;
         public string characterID;
         public string emotionID;
+        public string characterLocation;
         public string line;
         public string command;
     }
@@ -77,9 +77,9 @@ public class StoryManager : MonoBehaviour
             {
                 var conversationData = new ConversationData
                 {
-                    showCharacters = bool.TryParse(dialogue.Element("show_characters")?.Value, out bool showCharacters) ? showCharacters : true,
                     backgroundID = dialogue.Element("background_id")?.Value,
                     characterID = dialogue.Element("character_id")?.Value,
+                    characterLocation = dialogue.Element("character_location")?.Value,
                     emotionID = dialogue.Element("emotion_id")?.Value,
                     line = dialogue.Element("line")?.Value,
                     command = dialogue.Element("command")?.Value
