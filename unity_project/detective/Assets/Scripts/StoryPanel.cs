@@ -73,20 +73,28 @@ public class StoryPanel : MonoBehaviour
                 if (!string.IsNullOrEmpty(characterID))
                 {
                     Character prevCharacter = inst_characters.FirstOrDefault(character => character.CharacterID == characterID);
-                    if (prevCharacter != null)
+                    bool isSameEmotionID = prevCharacter != null && prevCharacter.RecentEmotionID == emotionID;
+                    if (!isSameEmotionID)
                     {
-                        inst_characters.Remove(prevCharacter);
-                        prevCharacter.FadeOutAndDestroy(.3f);
+                        if(prevCharacter != null)
+                        {
+                            inst_characters.Remove(prevCharacter);
+                            prevCharacter.FadeOutAndDestroy(.3f);
+                        }
+                        Character inst_character = InstantiateCharacter(characterID);
+                        if (inst_character != null)
+                        {
+                            inst_character.transform.position = GetCharacterLocation(characterLocation);
+                            inst_character.Initialize(characterID);
+                            inst_character.FadeOut(0f);
+                            inst_character.SetEmotionData(emotionID);
+                            inst_character.FadeIn(.5f);
+                            inst_characters.Add(inst_character);
+                        }
                     }
-                    Character inst_character = InstantiateCharacter(characterID);
-                    if (inst_character != null)
+                    else
                     {
-                        inst_character.transform.position = GetCharacterLocation(characterLocation);
-                        inst_character.Initialize(characterID);
-                        inst_character.FadeOut(0f);
-                        inst_character.SetEmotionData(emotionID);
-                        inst_character.FadeIn(.5f);
-                        inst_characters.Add(inst_character);
+
                     }
                 }
                 else

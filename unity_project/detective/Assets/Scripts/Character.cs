@@ -19,6 +19,11 @@ public class Character : MonoBehaviour
     // 캐릭터의 감정 상태를 갱신합니다. emotionStyle과 index를 기반으로 캐릭터 이미지를 설정합니다.
     public void SetEmotionData(string emotionID)
     {
+        if(_recentEmotionID == emotionID)
+        {
+            Debug.Log("이전 emotionID과 동일 ");
+            return;
+        }
         Sprite newSprite = Resources.Load<Sprite>($"Characters/{_characaterID}/{emotionID}");
         if (newSprite != null)
         {

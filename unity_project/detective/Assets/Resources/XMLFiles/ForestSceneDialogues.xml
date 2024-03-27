@@ -4,10 +4,20 @@
     <_>
       <section_index>0</section_index>
       <command />
+      <background_id>ensayne_wooden_door__Door_Bell_Shopkeeper_japanese_anime_style_d4e702d1-999e-4931-af32-86cab5f69dd8</background_id>
+      <character_id>Mono</character_id>
+      <character_location />
+      <emotion_style />
+      <emotion_id />
+      <lines />
+    </_>
+    <_>
+      <section_index />
+      <command />
       <background_id>ensayne_change_to_ocean_landscape_outside_93d61b21-5ca3-4a5e-b06c-1aed27c7d333</background_id>
       <character_id>Mono</character_id>
       <character_location />
-      <emotion_style>Normal</emotion_style>
+      <emotion_style />
       <emotion_id />
       <lines>문이 열리자 소리와 함께 신선한 바다 바람이 내부로 스며든다.</lines>
     </_>
@@ -29,7 +39,7 @@
       <character_location>Left</character_location>
       <emotion_style>Smile</emotion_style>
       <emotion_id>ensayne_full_body_shot_black_outline_cute_hands_in_pockets_26__0dbea81b-d8ea-445a-8cbd-d9731fb3c8e3</emotion_id>
-      <lines>와, 진짜 오늘 날씨도 완벽하고, 이렇게 좋은 소식을 듣게 될 줄이야, 기분이 얼마나 좋은지 몰라요!</lines>
+      <lines>와, 진짜 오늘 날씨도 완벽하고, 기분이 얼마나 좋은지 몰라요!</lines>
     </_>
     <_>
       <section_index />
@@ -39,7 +49,7 @@
       <character_location>Right</character_location>
       <emotion_style>Smile</emotion_style>
       <emotion_id>ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_e2f30eb3-3d5c-456e-abd3-da74a012837a</emotion_id>
-      <lines>물론이죠 조셉 할아버지! 오늘 날씨도 좋고, 여기 와서 커피 한 잔하면 기분이 업될 것 같아서 바로 달려왔죠!</lines>
+      <lines>물론이죠 조셉 할아버지! 오늘 날씨도 좋고, 여기 와서 커피 한 잔하면 기분이 좋아 질 것 같아서 바로 달려왔죠!</lines>
     </_>
     <_>
       <section_index />
@@ -57,14 +67,44 @@
       <background_id>ensayne_email_screen_f1b93f60-7905-4f1b-9845-1ed654db7237</background_id>
       <character_id>Mono</character_id>
       <character_location />
-      <emotion_style>Normal</emotion_style>
+      <emotion_style />
       <emotion_id />
-      <lines>리사가 눈을 크게 뜨고 믿을 수 없다는 듯이 말한다.</lines>
+      <lines>조셉 할아버지는 늘 그랬듯이 환대로 그들을 맞이한다. 분위기는 따뜻하고 화목하다.; 이제는 동료들에게 어제의 일을 설명해야겠어.</lines>
     </_>
     <_>
       <section_index />
       <command />
       <background_id>ensayne_change_to_ocean_landscape_outside_93d61b21-5ca3-4a5e-b06c-1aed27c7d333</background_id>
+      <character_id>Tom</character_id>
+      <character_location>Middle</character_location>
+      <emotion_style>Smile</emotion_style>
+      <emotion_id>ensayne_smile_mouth_d17b975f-7580-4024-a6a2-b9dee38c7ccf</emotion_id>
+      <lines>그래서, 라이언. 무슨 중요한 할 말이 있었어?</lines>
+    </_>
+    <_>
+      <section_index />
+      <command />
+      <background_id />
+      <character_id>Ryan</character_id>
+      <character_location />
+      <emotion_style />
+      <emotion_id />
+      <lines>잘 알다시피, 최근 몇 달 간 우리 스튜디오는 좀 고전했어. 하지만, 여기 우리 앞에 새로운 기회가 왔다; 바로 레이첼 블랙으로부터 말이야.</lines>
+    </_>
+    <_>
+      <section_index />
+      <command />
+      <background_id />
+      <character_id>Mono</character_id>
+      <character_location />
+      <emotion_style />
+      <emotion_id />
+      <lines>리사는 눈을 크게 뜨고 믿을 수 없다는 듯이 말한다.</lines>
+    </_>
+    <_>
+      <section_index />
+      <command />
+      <background_id />
       <character_id>Lisa</character_id>
       <character_location>Right</character_location>
       <emotion_style>Surprised</emotion_style>
@@ -78,7 +118,7 @@
       <character_id>Tom</character_id>
       <character_location>Middle</character_location>
       <emotion_style>Normal</emotion_style>
-      <emotion_id>ensayne_brown_pillar_eye_a057941c-3c75-4fb9-ba43-f193bdbc62d7</emotion_id>
+      <emotion_id>ensayne_angry_yelling_mouth_c9a64787-9687-4013-bc0f-3a1c33487202</emotion_id>
       <lines>정말, 이게 사실인지 아직도 잘 모르겠어. 레이첼 블랙이라니, 뭔가 착오가 있는 건 아닐까? ;
 진짜라 쳐도, 우리가 진짜 그녀와 문제없이 일할 수 있을까?</lines>
     </_>
@@ -108,11 +148,21 @@
       <section_index />
       <command />
       <background_id />
+      <character_id>Kate</character_id>
+      <character_location>Left</character_location>
+      <emotion_style>Smile</emotion_style>
+      <emotion_id>ensayne_full_body_shot_black_outline_cute_hands_in_pocket_26_y_96a101a9-b70d-4d97-b2f7-2cc6776d85cf</emotion_id>
+      <lines>톰, 너무 신중한 것 아냐? 우리가 이만큼 성장한 것도 다 이유가 있는 거야; 레이첼이 우리한테 관심을 보인다는 것 자체가 우리가 가치 있다는 증거라구!; 우리는 그냥 우리가 해왔던 일을 자랑스럽게 말하면 돼!</lines>
+    </_>
+    <_>
+      <section_index />
+      <command />
+      <background_id />
       <character_id>Lisa</character_id>
       <character_location>Right</character_location>
       <emotion_style>Sad</emotion_style>
-      <emotion_id>ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_aa533817-6bee-4e7c-9242-0b74898d908c</emotion_id>
-      <lines>맞아... 레이첼이 우리에게 실망하면 어쩌지..</lines>
+      <emotion_id>ensayne_full-body-shot_black_outline_21-year-old_introvert_cut_09a4500e-1e1b-427a-9d0b-c66f3c5017d3</emotion_id>
+      <lines>맞아... 우리 모두에게 좋은 기회가 될 수 있어. 하지만 레이첼이 우리에게 실망하지 않게 신중하게 답장을 보내야 해; 우리 모두의 의견을 잘 정리해서, 그녀에게 우리의 진심을 전달해야 해.</lines>
     </_>
     <_>
       <section_index>2</section_index>
@@ -120,39 +170,9 @@
       <background_id>ensayne_25_year-old_man_is_typing_macbook_focus_on_hands_ff7ca4ad-8d45-4ee8-b433-36466dbc58bf</background_id>
       <character_id>Mono</character_id>
       <character_location />
-      <emotion_style>Normal</emotion_style>
+      <emotion_style />
       <emotion_id />
       <lines>이제 팀은 레이첼 블랙에게 보낼 답장을 고민하기 시작한다. 그들은 흥분과 조심스러움 사이에서 최선의 방법을 찾으려고 한다. 그리고 답장을 보낸다.</lines>
-    </_>
-    <_>
-      <section_index />
-      <command />
-      <background_id />
-      <character_id>Mono</character_id>
-      <character_location />
-      <emotion_style>Normal</emotion_style>
-      <emotion_id>ensayne_full_body_shot_black_outline_mature_28_year-old_long_b_ab614239-6922-4478-8864-f487826465a6</emotion_id>
-      <lines>안녕하세요 레이첼 님, 우리 스트리머 스튜디오는 당신의 메시지를 받고 매우 기쁩니다. 당신의 열정과 창의성은 항상 우리에게 큰 영감을 주었고, 이제 당신과 함께 일할 기회를 갖게 되어 영광입니다.</lines>
-    </_>
-    <_>
-      <section_index />
-      <command />
-      <background_id />
-      <character_id>Mono</character_id>
-      <character_location />
-      <emotion_style>Normal</emotion_style>
-      <emotion_id />
-      <lines>다음주 화요일 오후 2시, 카페 시브리즈에서 만나 이야기를 나눌 수 있다면 좋겠습니다. 이 시간이 당신에게도 적합한지 확인해 주세요. 우리는 이 만남을 통해 당신과 더 많은 아이디어를 공유하고 싶습니다.</lines>
-    </_>
-    <_>
-      <section_index />
-      <command />
-      <background_id />
-      <character_id>Mono</character_id>
-      <character_location />
-      <emotion_style>Normal</emotion_style>
-      <emotion_id />
-      <lines>당신의 답장을 기다리며, 다시 한번 이 기회에 감사드립니다. 최고의 인사를 담아, 스트리머 스튜디오 팀</lines>
     </_>
   </__1>
 </data>

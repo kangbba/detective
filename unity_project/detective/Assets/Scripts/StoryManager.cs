@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
@@ -7,7 +8,7 @@ public class StoryManager : MonoBehaviour
 {
     public StoryPanel storyPanel;
     public List<Section> sections = new List<Section>();
-    public TextAsset xmlFile;
+    public TextAsset[] xmlFiles;
 
     [System.Serializable]
     public class Section
@@ -41,10 +42,20 @@ public class StoryManager : MonoBehaviour
 
     void Start()
     {
-        LoadConversationsFromXML();
+        StartCoroutine(GameRoutine());
     }
 
-    void LoadConversationsFromXML()
+    private IEnumerator GameRoutine()
+    {
+        for (int i = 0; i < xmlFiles.Length; i++)
+        {
+            var xmlFile = xmlFiles[i];
+            LoadConversationsFromXML(xmlFile);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    void LoadConversationsFromXML(TextAsset xmlFile)
     {
         XDocument xmlDoc = XDocument.Parse(xmlFile.text);
         var dialogues = xmlDoc.Element("data").Element("__1").Elements("_");
@@ -77,12 +88,12 @@ public class StoryManager : MonoBehaviour
             {
                 var conversationData = new ConversationData
                 {
-                    backgroundID = dialogue.Element("background_id")?.Value,
-                    characterID = dialogue.Element("character_id")?.Value,
-                    characterLocation = dialogue.Element("character_location")?.Value,
-                    emotionID = dialogue.Element("emotion_id")?.Value,
+                    backgroundID = dialogue.Element("background_id")?.Value.Trim(),
+                    characterID = dialogue.Element("character_id")?.Value.Trim(),
+                    characterLocation = dialogue.Element("character_location")?.Value.Trim(),
+                    emotionID = dialogue.Element("emotion_id")?.Value.Trim(),
                     lines = dialogue.Element("lines")?.Value,
-                    command = dialogue.Element("command")?.Value
+                    command = dialogue.Element("command")?.Value.Trim()
                 };
 
                 currentSection.conversationDatas.Add(conversationData);
